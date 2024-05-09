@@ -1,0 +1,81 @@
+unit calculadora;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    txt_n1: TEdit;
+    Label3: TLabel;
+    txt_n2: TEdit;
+    Label4: TLabel;
+    txt_result: TEdit;
+    btn_soma: TButton;
+    btn_subtracao: TButton;
+    btn_multiplicacao: TButton;
+    btn_divisao: TButton;
+    btn_limpar: TButton;
+    procedure btn_somaClick(Sender: TObject);
+    procedure btn_subtracaoClick(Sender: TObject);
+    procedure btn_multiplicacaoClick(Sender: TObject);
+    procedure btn_divisaoClick(Sender: TObject);
+    procedure btn_limparClick(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    var n1, n2, result : integer;
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm2.btn_divisaoClick(Sender: TObject);
+begin
+     n1 := StrToInt(txt_n1.Text);
+     n2 := StrToInt(txt_n2.Text);
+     result := n1 / n2;
+     txt_result.text := IntToStr(result);
+end;
+
+procedure TForm2.btn_limparClick(Sender: TObject);
+begin
+txt_n1 := '';
+txt_n2 := '';
+txt_result := '';
+end;
+
+procedure TForm2.btn_multiplicacaoClick(Sender: TObject);
+begin
+     n1 := StrToInt(txt_n1.Text);
+     n2 := StrToInt(txt_n2.Text);
+     result := n1 * n2;
+     txt_result.text := IntToStr(result);
+end;
+
+procedure TForm2.btn_somaClick(Sender: TObject);
+begin
+     n1 := StrToInt(txt_n1.Text);
+     n2 := StrToInt(txt_n2.Text);
+     result := n1 + n2;
+     txt_result.text := IntToStr(result);
+end;
+
+procedure TForm2.btn_subtracaoClick(Sender: TObject);
+begin
+     n1 := StrToInt(txt_n1.Text);
+     n2 := StrToInt(txt_n2.Text);
+     result := n1 - n2;
+     txt_result.text := IntToStr(result);
+end;
+
+end.

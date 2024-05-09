@@ -1,0 +1,108 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TForm1 = class(TForm)
+    btn_nome: TButton;
+    txt_nome: TEdit;
+    txt_nome2: TEdit;
+    txt_nome3: TEdit;
+    btn_limpar: TButton;
+    lb_1: TLabel;
+    Button1: TButton;
+    SpeedButton1: TSpeedButton;
+    txt_value: TEdit;
+    txt_value2: TEdit;
+    txt_value3: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    procedure btn_nomeClick(Sender: TObject);
+    procedure btn_limparClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+    //É possível declarar mais de uma variável do mesmo tipo, sendo na mesma line.
+    var nome, sobrenome, endereco:string;
+    var valor1, valor2, total :integer;
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm1.btn_limparClick(Sender: TObject);
+begin
+  txt_nome.text := '';
+  txt_nome2.text := '';
+  txt_nome3.text := '';
+end;
+
+procedure TForm1.btn_nomeClick(Sender: TObject);
+begin
+  nome := 'Sanches';
+  sobrenome := 'Monteiro';
+  endereco := 'Emílio Mori';
+
+  //Após o nome do elemento (ex: txt_nome) vem ".{propriedade}", que pode ser checada
+  //no design, colocamos a {propriedade} respectiva que queremos alterar, nesses casos
+  //abaixo, ".{text}".
+  txt_nome.text := nome;
+  txt_nome2.text := sobrenome;
+  txt_nome3.text := endereco;
+end;
+
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  nome := 'Sanches';
+  sobrenome := 'Monteiro';
+  endereco := 'Emílio Mori';
+
+  lb_1.Caption := 'Delphi 10.02 Tokyo';
+end;
+
+
+procedure TForm1.SpeedButton1Click(Sender: TObject);
+begin
+  valor1 := StrToInt(txt_value.text); //.text -> por que é na propriedade texto.
+  //Colocamos StrToInt para converter o valor String da caixa de texto para Int (formato objetivo), até
+  //para podermos realizar operações como soma, que não são possíveis se recebesse uma string.
+  valor2 := StrToInt(txt_value2.text);
+  total := valor1+valor2;
+  txt_value3.Text  := IntToStr(total);       //.text -> propriedade texto!
+  //Propriedades como caption, text, só leêm elemetos em string, como precisamos
+  //ler um elemento tipo Integer, precisamos converter, utilizando 'IntToStr':
+  lb_1.Caption := IntToStr(total);
+end;
+
+end.
+
+
+//Tipos de Variável:
+  // STRING 'Felipe Sanches'.
+  // INTEGER 5 -> NÚMERO INTEIRO.
+  // REAL 5.00 -> NÚMERO REAL (POUCO UTILIZADO).
+  // DOUBLE 100.50 -> NÚMERO DECIMAL (MAIS UTILIZADO).
+  // BOOLEAM ATIVO := TRUE (OR FALSE) / booleano.
+
+

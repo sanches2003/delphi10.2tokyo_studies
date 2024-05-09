@@ -1,0 +1,18 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  main in 'main.pas' {Form_Principal},
+  calculadora in 'calculadora.pas' {Form_calculadora},
+  contador in 'contador.pas' {Form_contador};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm_Principal, Form_Principal);
+  Application.CreateForm(TForm_calculadora, Form_calculadora);
+  Application.CreateForm(TForm_contador, Form_contador);
+  Application.Run;
+end.

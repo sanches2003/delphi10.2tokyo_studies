@@ -1,0 +1,62 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    btn_nome: TButton;
+    txt_nome: TEdit;
+    txt_nome2: TEdit;
+    txt_nome3: TEdit;
+    btn_limpar: TButton;
+    lb_1: TLabel;
+    procedure btn_nomeClick(Sender: TObject);
+    procedure btn_limparClick(Sender: TObject);
+  private
+    { Private declarations }
+    //É possível declarar mais de uma variável do mesmo tipo, sendo na mesma line.
+    var nome, sobrenome, endereco:string;
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm1.btn_limparClick(Sender: TObject);
+begin
+  txt_nome.text := '';
+  txt_nome2.text := '';
+  txt_nome3.text := '';
+end;
+
+procedure TForm1.btn_nomeClick(Sender: TObject);
+begin
+  nome := 'Sanches';
+  sobrenome := 'Monteiro';
+  endereco := 'Emílio Mori';
+  txt_nome.text := nome;
+  txt_nome2.text := sobrenome;
+  txt_nome3.text := endereco;
+end;
+
+end.
+
+
+//Tipos de Variável:
+  // STRING 'Felipe Sanches'
+  // INTEGER 5 -> NÚMERO INTEIRO
+  // REAL 5.00 -> NÚMERO REAL (POUCO UTILIZADO)
+  // DOUBLE 100.50 -> NÚMERO DECIMAL (MAIS UTILIZADO)
+  // BOOLEAM ATIVO := TRUE (OR FALSE) / booleano
+

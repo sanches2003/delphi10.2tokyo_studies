@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/05/07 10:44:07.000.541,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/07 10:48:49.000.816,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/05/08 12:47:41.000.398,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/05/08 12:47:55.000.135,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora.pas</Transaction>
+    <Transaction>2024/05/08 12:47:55.000.135,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora.dfm</Transaction>
+    <Transaction>2024/05/08 12:48:00.000.968,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\main.dfm</Transaction>
+    <Transaction>2024/05/08 12:48:00.000.968,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\main.pas</Transaction>
+    <Transaction>2024/05/09 10:46:48.857,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/09 10:46:54.159,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\contador.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/09 10:46:54.159,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\contador.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="calculadora.pas"/>
+    <File Path="calculadora.dfm"/>
+    <File Path="main.pas"/>
+    <File Path="main.dfm"/>
+    <File Path="contador.pas"/>
+    <File Path="contador.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

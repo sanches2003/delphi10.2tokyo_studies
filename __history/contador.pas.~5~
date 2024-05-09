@@ -1,0 +1,43 @@
+unit contador;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm_contador = class(TForm)
+    lb_cont: TLabel;
+    btn_contar: TButton;
+    procedure btn_contarClick(Sender: TObject);
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_contador: TForm_contador;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm_contador.btn_contarClick(Sender: TObject);
+    {Não deixar a variável do contador 'cont' na área de variáveis no topo base, sempre declarar dentro
+    da procedure, pois ela não pode sofrer variações e sofrer erros de looping (que na verdade é
+    uma validação de referência incorreta).}
+    //Sempre declarar antes do begin:
+    var cont :integer;
+    begin
+    for cont := 1 to 5 do {Repetição básica: Escolhi repetição de 1 para 5 (5x). Também podem ser variáveis
+    e linhas de código que percorrem os registros num BD, também retorna valores (rowcout?).}
+    begin
+      ShowMessage(IntToStr(cont));
+    end;
+
+end;
+
+end.
