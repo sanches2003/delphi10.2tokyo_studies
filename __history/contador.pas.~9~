@@ -1,0 +1,60 @@
+unit contador;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm_contador = class(TForm)
+    lb_cont: TLabel;
+    btn_contar: TButton;
+    btn_downto: TButton;
+    procedure btn_cont(Sender: TObject);
+    procedure btn_downtoClick(Sender: TObject);
+  private
+    { Private declarations }
+      htggdfzdz
+  public
+    { Public declarations }
+  end;
+
+var
+  Form_contador: TForm_contador;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm_contador.btn_cont(Sender: TObject);
+    {Não deixar a variável do contador 'cont' na área de variáveis no topo base, sempre declarar dentro
+    da procedure, pois ela não pode sofrer variações e sofrer erros de looping (que na verdade é
+    uma validação de referência incorreta).}
+    //Sempre declarar antes do begin:
+    var cont :integer;
+    begin
+    for cont := 1 to 5 do {Repetição básica: Escolhi repetição de 1 para 5 (5x). Também podem ser variáveis
+    e linhas de código que percorrem os registros num BD, também retorna valores (rowcount?).}
+    begin
+      ShowMessage(IntToStr(cont));
+    end;
+
+end;
+
+procedure TForm_contador.btn_downtoClick(Sender: TObject);
+var cont :integer;
+begin
+    for cont := 5 DownTo 1 do {'for' é um elemento de repetição que possui um número definido de vezes a
+    repetir (seja por um número propriamente dito, variáveis ou rowcount, diferente de if, que é
+    'isso ou aquilo, etc' e 'while' que é repetição perpétua até sair da condição que foi definida.}
+    begin
+      ShowMessage(IntToStr(cont));
+      if (cont <= 0) then
+      begin
+        ShowMessage('O contador chegou a 0');
+      end;
+    end;
+end;
+
+end.

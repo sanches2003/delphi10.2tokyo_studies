@@ -11,11 +11,13 @@ type
     lb_cont: TLabel;
     btn_contar: TButton;
     btn_downto: TButton;
+    btn_while: TButton;
     procedure btn_cont(Sender: TObject);
     procedure btn_downtoClick(Sender: TObject);
+    procedure btn_whileClick(Sender: TObject);
   private
     { Private declarations }
-      htggdfzdz
+
   public
     { Public declarations }
   end;
@@ -54,6 +56,20 @@ begin
       begin
         ShowMessage('O contador chegou a 0');
       end;
+    end;
+end;
+
+procedure TForm_contador.btn_whileClick(Sender: TObject);
+var cont :integer;
+begin
+//LOOPING DE REPETIÇÃO WHILE.
+//Pode travar o sistema deixando em looping infinito.
+  cont := 1; //Definindo um valor para a variável 'cont' para dar um.
+  while (cont <= 5) do
+    begin
+      ShowMessage(IntToStr(cont));
+      inc(cont) //'inc(*variavel*)' é o comando para sempre incrementar '+1' no valor inteiro da variável.
+      //Outra forma de incremento: " cont:= cont+1; " podendo ter controle no valor que é adicionado à variável.
     end;
 end;
 

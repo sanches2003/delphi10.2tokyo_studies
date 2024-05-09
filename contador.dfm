@@ -44,4 +44,13 @@ object Form_contador: TForm_contador
     TabOrder = 1
     OnClick = btn_downtoClick
   end
+  object btn_while: TButton
+    Left = 200
+    Top = 176
+    Width = 75
+    Height = 25
+    Caption = 'While'
+    TabOrder = 2
+    OnClick = btn_whileClick
+  end
 end
