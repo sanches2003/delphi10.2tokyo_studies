@@ -70,7 +70,6 @@ begin
       ShowMessage(IntToStr(cont));
       inc(cont) //'inc(*variavel*)' é o comando para sempre incrementar '+1' no valor inteiro da variável.
       //Outra forma de incremento: " cont:= cont+1; " podendo ter controle no valor que é adicionado à variável.
-      //Dessa forma acima, também podemos diminuir o cont como " cont:= cont-1; ".
     end;
 end;
 

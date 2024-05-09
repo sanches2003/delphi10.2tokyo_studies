@@ -11,8 +11,8 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm_contador, Form_contador);
   Application.CreateForm(TForm_calculadora, Form_calculadora);
+  Application.CreateForm(TForm_contador, Form_contador);
   Application.CreateForm(TForm_Principal, Form_Principal);
   Application.Run;
 end.
