@@ -4,13 +4,19 @@
     <Transaction>2024/05/07 10:44:07.000.541,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2024/05/07 10:48:49.000.816,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2024/05/08 12:47:41.000.398,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2024/05/08 12:47:55.000.135,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2024/05/08 12:47:55.000.135,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
-    <Transaction>2024/05/08 12:48:00.000.968,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\main.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/05/08 12:48:00.000.968,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\main.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/05/08 12:47:55.000.135,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora.pas</Transaction>
+    <Transaction>2024/05/08 12:47:55.000.135,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora.dfm</Transaction>
+    <Transaction>2024/05/08 12:48:00.000.968,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\main.pas</Transaction>
+    <Transaction>2024/05/08 12:48:00.000.968,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\main.dfm</Transaction>
     <Transaction>2024/05/09 10:46:48.000.857,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/05/09 10:46:54.000.159,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\contador.pas</Transaction>
-    <Transaction>2024/05/09 10:46:54.000.159,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\contador.dfm</Transaction>
+    <Transaction>2024/05/09 10:46:54.000.159,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\contador.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/09 10:46:54.000.159,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\contador.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/05/10 09:30:42.316,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/10 09:30:52.145,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\tela2.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/10 09:30:52.145,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\tela2.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/05/10 10:38:59.482,=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/10 10:39:13.420,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora_master.dfm=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/05/10 10:39:13.420,C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\calculadora_master.pas=C:\Users\Samsung\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="calculadora.pas"/>
@@ -19,5 +25,9 @@
     <File Path="main.dfm"/>
     <File Path="contador.pas"/>
     <File Path="contador.dfm"/>
+    <File Path="tela2.pas"/>
+    <File Path="tela2.dfm"/>
+    <File Path="calculadora_master.pas"/>
+    <File Path="calculadora_master.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

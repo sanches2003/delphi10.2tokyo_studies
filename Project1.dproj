@@ -113,6 +113,14 @@
             <Form>Form_contador</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="tela2.pas">
+            <Form>frm_tela2</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="calculadora_master.pas">
+            <Form>form_calc</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

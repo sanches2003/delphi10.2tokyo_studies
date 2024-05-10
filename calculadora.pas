@@ -38,7 +38,6 @@ implementation
 
 {$R *.dfm}
 
-
 procedure TForm_calculadora.btn_divisaoClick(Sender: TObject);
 begin
      n1 := StrToFloat(txt_n1.Text);

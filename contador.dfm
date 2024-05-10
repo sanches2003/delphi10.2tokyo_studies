@@ -53,4 +53,13 @@ object Form_contador: TForm_contador
     TabOrder = 2
     OnClick = btn_whileClick
   end
+  object btn_tela2: TButton
+    Left = 344
+    Top = 96
+    Width = 75
+    Height = 25
+    Caption = 'Tela 2'
+    TabOrder = 3
+    OnClick = btn_tela2Click
+  end
 end
