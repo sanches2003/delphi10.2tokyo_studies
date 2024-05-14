@@ -24,14 +24,33 @@ type
     btn_seis: TButton;
     btn_cinco: TButton;
     btn_quatro: TButton;
-    txt_n1: TEdit;
-    txt_n2: TEdit;
     lb_operador: TLabel;
+    lb_num1: TLabel;
+    lb_num2: TLabel;
+    lb_igual: TLabel;
+    lb_resultado: TLabel;
+    btn_clear: TButton;
+    btn_apagar: TButton;
+    btn_c: TButton;
     procedure btn_subtClick(Sender: TObject);
     procedure btn_moreClick(Sender: TObject);
     procedure btn_multClick(Sender: TObject);
     procedure btn_divisaoClick(Sender: TObject);
     procedure btn_igualClick(Sender: TObject);
+    procedure btn_umClick(Sender: TObject);
+    procedure btn_clearClick(Sender: TObject);
+    procedure btn_0Click(Sender: TObject);
+    procedure btn_doisClick(Sender: TObject);
+    procedure btn_tresClick(Sender: TObject);
+    procedure btn_seisClick(Sender: TObject);
+    procedure btn_cincoClick(Sender: TObject);
+    procedure btn_quatroClick(Sender: TObject);
+    procedure btn_noveClick(Sender: TObject);
+    procedure btn_oitoClick(Sender: TObject);
+    procedure btn_seteClick(Sender: TObject);
+    procedure btn_apagarClick(Sender: TObject);
+    procedure btn_pointClick(Sender: TObject);
+    procedure btn_cClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -47,50 +66,133 @@ implementation
 {$R *.dfm}
 
 
+procedure Tform_calc.btn_0Click(Sender: TObject);
+begin
+     if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '0';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '0';
+  end;
+end;
+
+procedure Tform_calc.btn_apagarClick(Sender: TObject);
+begin
+  {faço uma cópia do número 1}
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption :=  copy(lb_num1.Caption, 0, length(lb_num1.caption)-1);
+  end
+  else begin
+     lb_num2.caption :=  copy(lb_num2.Caption, 0, length(lb_num2.caption)-1);
+  end;
+
+end;
+
+procedure Tform_calc.btn_cClick(Sender: TObject);
+  begin
+
+    if lb_operador.caption = '' then
+    begin
+      lb_num1.caption := '';
+    end
+    else
+    begin
+      lb_num2.caption := '';
+    end;
+
+  end;
+
+procedure Tform_calc.btn_cincoClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '5';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '5';
+  end;
+end;
+
+procedure Tform_calc.btn_clearClick(Sender: TObject);
+begin
+  lb_num1.caption := '';
+  lb_num2.caption := '';
+  lb_resultado.caption := '';
+  lb_operador.caption := '';
+  btn_more.Enabled  := true;
+  btn_subt.Enabled  := true;
+  btn_divisao.Enabled  := true;
+  btn_mult.Enabled  := true;
+end;
+
 procedure Tform_calc.btn_divisaoClick(Sender: TObject);
 begin
-lb_operador.caption := '÷';
- lb_operador.caption := '+';
+  lb_operador.caption := '÷';
   btn_more.Enabled  := true;
   btn_subt.Enabled  := true;
   btn_divisao.Enabled  := false;
   btn_mult.Enabled  := true;
 end;
 
+procedure Tform_calc.btn_doisClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '2';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '2';
+  end;
+end;
+
 procedure Tform_calc.btn_igualClick(Sender: TObject);
 var n1, n2, total : double;
 var x:char;
 begin
-  n1 := StrToFloat(txt_n1.Text);
-  n2 := StrToFloat(txt_n2.Text);
+  n1 := StrToFloat(lb_num1.caption);
+  n2 := StrToFloat(lb_num2.caption);
 
   //Fazendo validações com 'Switch case':
    {a varíavel 'x'(character), recebe o valor do 'label_operador', fizemos
    um array selecionando a primeira posição, que lê apenas o primeiro caractere, assim evintando conflito
    de formato Char/String.}
    x := lb_operador.Caption[1];
-   case x of '+':
+   case x of
+
+    '+':
     begin
-      ShowMessage(FloatToStr(n1+n2));
+      lb_resultado.caption:=FloatToStr(n1+n2);
     end;
 
-   end;
+
+    '-':
+    begin
+      lb_resultado.caption:=FloatToStr(n1-n2);
+      end;
+
+    end;
+
+
 
   //Fazendo validações com 'If, Else':
   if (lb_operador.caption = 'x') then
   begin
     total := n1*n2;
-    ShowMessage(FloatToStr(total));
+    lb_resultado.caption:=FloatToStr(total);
   end
   else if (lb_operador.caption = '÷') then
   begin
     total := n1/n2;
-    ShowMessage(FloatToStr(total));
+    lb_resultado.caption:=FloatToStr(total);
   end;
 
+  end;
 
-
-end;
 
 procedure Tform_calc.btn_moreClick(Sender: TObject);
 begin
@@ -110,6 +212,78 @@ begin
   btn_mult.Enabled  := false;
 end;
 
+procedure Tform_calc.btn_noveClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '9';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '9';
+  end;
+end;
+
+procedure Tform_calc.btn_oitoClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '8';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '8';
+  end;
+end;
+
+procedure Tform_calc.btn_pointClick(Sender: TObject);
+begin
+   if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + ',';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + ',';
+  end;
+end;
+
+procedure Tform_calc.btn_quatroClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '4';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '4';
+  end;
+end;
+
+procedure Tform_calc.btn_seisClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '6';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '6';
+  end;
+end;
+
+procedure Tform_calc.btn_seteClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '7';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '7';
+  end;
+end;
+
 procedure Tform_calc.btn_subtClick(Sender: TObject);
 begin
   lb_operador.caption := '-';
@@ -121,5 +295,33 @@ begin
 end;
 
 
+procedure Tform_calc.btn_tresClick(Sender: TObject);
+begin
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '3';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '3';
+  end;
+end;
+
+procedure Tform_calc.btn_umClick(Sender: TObject);
+begin
+
+    //Lógica: Se o operador estiver neutro, ou seja '.', vai aplicar o número selecionado na posição 1
+    //(num1), agora se houver algum valor atrelado ao operador, aplicará a posição 2 (num2), podendo rea-
+    //lizar a soma.
+  if lb_operador.caption = '' then
+  begin
+    lb_num1.caption := lb_num1.caption + '1';
+  end
+  else
+  begin
+    lb_num2.caption := lb_num2.caption + '1';
+  end;
+
+end;
 
 end.
