@@ -3,7 +3,7 @@ object form_calc: Tform_calc
   Top = 0
   Caption = 'Calculadora'
   ClientHeight = 345
-  ClientWidth = 293
+  ClientWidth = 292
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -65,10 +65,12 @@ object form_calc: Tform_calc
     ParentFont = False
   end
   object lb_resultado: TLabel
-    Left = 242
+    Left = 221
     Top = 44
-    Width = 6
-    Height = 18
+    Width = 63
+    Height = 21
+    Alignment = taRightJustify
+    AutoSize = False
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16

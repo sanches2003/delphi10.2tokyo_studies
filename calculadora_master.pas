@@ -166,13 +166,14 @@ begin
 
     '+':
     begin
-      lb_resultado.caption:=FloatToStr(n1+n2);
+      lb_resultado.caption:=formatFloat(',0.00',(n1+n2));
     end;
 
 
     '-':
     begin
-      lb_resultado.caption:=FloatToStr(n1-n2);
+      //lb_resultado.caption:=FloatToStr(n1-n2);
+      lb_resultado.caption:=formatFloat(',0.00',(n1-n2));
       end;
 
     end;
@@ -183,12 +184,12 @@ begin
   if (lb_operador.caption = 'x') then
   begin
     total := n1*n2;
-    lb_resultado.caption:=FloatToStr(total);
+    lb_resultado.caption:=formatFloat(',0.00',(total));
   end
   else if (lb_operador.caption = '÷') then
   begin
     total := n1/n2;
-    lb_resultado.caption:=FloatToStr(total);
+    lb_resultado.caption:=formatFloat(',0.00',(total));
   end;
 
   end;
